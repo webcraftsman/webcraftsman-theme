@@ -1,0 +1,13 @@
+{
+  "name": "webcraftsman",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-dart-sass": "*"
+  }
+}

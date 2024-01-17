@@ -1,0 +1,2 @@
+<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/jquery.cycle.lite.1.0.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/home_slideshow.js"></script>

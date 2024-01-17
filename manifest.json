@@ -1,0 +1,16 @@
+{
+    "short_name": "Jeff Bridgforth",
+    "name": "Jeff Bridgforth :: Front-end Developer",
+    "icons": [
+      {
+        "src": "/wp-content/themes/responsive/jb-logo-192.png", 
+        "type": "image/png", 
+        "sizes": "192x192" 
+      },
+      {
+        "src": "/wp-content/themes/responsive/jb-logo-512.png", 
+        "type": "image/png", 
+        "sizes": "512x512" 
+      }
+    ]
+  }
