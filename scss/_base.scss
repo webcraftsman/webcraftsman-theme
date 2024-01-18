@@ -30,6 +30,36 @@ $layout-size:16px;
 
 // Beige https://0to255.com/#f5f4f0
 
+@mixin theme-light() {
+	color-scheme: light;
+	--brand-blue: #06143d;
+	--brand-beige: #e7e5dc;
+	--border-blue: rgba(6,20,21,.25);
+	--border-blue-hover: rgba(6,20,21,.65);
+	--border-beige: rgba(231,229,220, .25);
+	--border-beige-hover: rgba(231,229,220, .65);
+
+	--body-background-color: var(--brand-beige);
+	--text-color: var(--brand-blue);
+	--banner-background-color: var(--brand-blue);
+	--banner-color: var(--brand-beige);
+	--hr-color: var(--brand-blue);
+	--figure-border: var(--border-blue);
+	--figure-border-hover: var(--border-blue-hover);
+
+}
+
+@mixin theme-dark() {
+	color-scheme: dark;
+	--body-background-color: var(--brand-blue);
+	--text-color: var(--brand-beige);
+	--banner-background-color: var(--brand-beige);
+	--banner-color: var(--brand-blue);
+	--hr-color: var(--brand-beige);
+	--figure-border: var(--border-beige);
+	--figure-border-hover: var(--border-beige-hover);
+}
+
 :root {
 	overscroll-behavior: none;
 	--step--2: clamp(0.88rem, 0.8918rem + -0.0152vw, 0.8888rem);
@@ -66,32 +96,22 @@ $layout-size:16px;
 
 	/* Custom pairs */
 	--space-s-l: clamp(1.125rem, 0.5598rem + 2.8261vw, 2.75rem);
+}
 
-	--brand-blue: #06143d;
-	--brand-beige: #e7e5dc;
-	--border-blue: rgba(6,20,21,.25);
-	--border-blue-hover: rgba(6,20,21,.65);
-	--border-beige: rgba(231,229,220, .25);
-	--border-beige-hover: rgba(231,229,220, .65);
 
-	--body-background-color: var(--brand-beige);
-	--text-color: var(--brand-blue);
-	--banner-background-color: var(--brand-blue);
-	--banner-color: var(--brand-beige);
-	--hr-color: var(--brand-blue);
-	--figure-border: var(--border-blue);
-	--figure-border-hover: var(--border-blue-hover);
+:root,
+:root[data-theme="light"] {
+	@include theme-light;
+}
+
+
+:root[data-theme="dark"] {
+	@include theme-dark;
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--body-background-color: var(--brand-blue);
-		--text-color: var(--brand-beige);
-		--banner-background-color: var(--brand-beige);
-		--banner-color: var(--brand-blue);
-		--hr-color: var(--brand-beige);
-		--figure-border: var(--border-beige);
-		--figure-border-hover: var(--border-beige-hover);
+	:root:not([data-theme]) {
+		@include theme-dark;
 	}
 /*
 	body {
