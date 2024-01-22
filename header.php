@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title><?php if ( is_page('8230') ) { bloginfo('name');} elseif (is_single() || is_page() || is_archive()) { wp_title('',true); echo(' | '); bloginfo('name');} else { wp_title('',true); } ?></title>
+		<title><?php if ( is_page('8230') ) { bloginfo('description');} else { wp_title('',true); } ?></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1"/>
 		<meta name="description" content="Jeff Bridgforth is a senior developer with LGND.">

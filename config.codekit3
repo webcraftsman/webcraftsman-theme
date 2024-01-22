@@ -330,19 +330,6 @@
       "oAP" : "\/site_archive.php",
       "oF" : 1
     },
-    "\/social-icons.png" : {
-      "ft" : 32768,
-      "iS" : 1527,
-      "oA" : 1,
-      "oAP" : "\/social-icons.png",
-      "oF" : 1,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/style.css" : {
       "aP" : 1,
       "bl" : 0,
