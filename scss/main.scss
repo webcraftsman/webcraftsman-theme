@@ -415,7 +415,8 @@ figure {
 		box-sizing: border-box;
 		border: 1px solid var(--text-color);
 	}
-	&.no-border img {
+	&.no-border img,
+	.no-border & img {
 		border:none;
 	}
 	a {
@@ -425,6 +426,7 @@ figure {
 		display: none;
 	}
 }
+
 figcaption {
 	color: var(--text-color);
 	font-size: var(--step--1);
