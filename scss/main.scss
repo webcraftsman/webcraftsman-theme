@@ -608,6 +608,12 @@ a.button {
 	}
 }
 
+.post .more-space li {
+	&:not(:first-child) {
+		margin-top: var(--space-s);
+	}
+}
+
 .archive_list h3 {
 	font-size: var(--step-1);
 }
@@ -1151,6 +1157,10 @@ code {
 
 	ul li:not(:first-child) {
 		margin-top: var(--space-2xs);
+	}
+
+	ul.more-space li:not(:first-child) {
+		margin-top: var(--space-s);
 	}
 
 	* + figure {
