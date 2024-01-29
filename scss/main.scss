@@ -518,12 +518,6 @@ a.button {
 		min-height: calc(100vh - 218px);
 		padding-block: var(--space-2xl);
 	}
-
-	@media (min-width: layout-ems(1024px)) {
-		padding-block: var(--space-3xl);
-	}
-
-
 }
 .wrapper {
 	max-width:60em;
@@ -884,7 +878,7 @@ code {
 			padding:0 12px;
 		}
 		a {
-			background-color: transparent;
+			background-color: var(--banner-color);
 			border: 2px solid var(--banner-background-color);
 			border-radius: 8px;
 			color: var(--text-color);
@@ -1184,7 +1178,11 @@ code {
 }
 
 #introduction {
-	margin-bottom: var(--space-4xl);
+	background-color: var(--body-background-color);
+	margin-inline: calc(var(--space-l) * -1);
+	margin-top: calc(var(--space-l) * -1);
+	padding: var(--space-l);
+	margin-bottom: var(--space-3xl);
 
 	p {
 		max-width: 45ch;
@@ -1273,6 +1271,11 @@ code {
 	}
 }
 #latest-posts {
+	background-color: var(--body-background-color);
+	margin-inline: calc(var(--space-l) * -1);
+	margin-top: calc(var(--space-l) * -1);
+	padding: var(--space-l);
+
 	.post-time {
 		margin-bottom: var(--space-xs);
 	}
@@ -1383,6 +1386,10 @@ code {
 }
 
 .notes-listing {
+	background-color: var(--body-background-color);
+	margin-inline: calc(var(--space-l) * -1);
+	margin-top: calc(var(--space-l) * -1);
+	padding: var(--space-l);
 	margin-top: var(--space-2xl);
 
 	@supports (display: grid) {
@@ -1611,6 +1618,11 @@ code {
 	}
 }
 #content_posts {
+	background-color: var(--body-background-color);
+	margin-inline: calc(var(--space-l) * -1);
+	margin-top: calc(var(--space-l) * -1);
+	padding: var(--space-l);
+
 	.post-time {
 		margin-top: var(--space-m);
 
