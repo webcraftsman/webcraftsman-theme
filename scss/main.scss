@@ -70,6 +70,10 @@ h2 {
 
 h3 {
 	font-size: var(--step-2);
+
+	* + & {
+		margin-top: var(--space-xl);
+	}
 }
 
 h4 {
@@ -128,7 +132,8 @@ ul {
 }
 
 * + .video,
-* + .wp-block-embed-youtube {
+* + .wp-block-embed-youtube,
+* + .cp_embed_wrapper {
 	margin-top: var(--space-l);
 }
 
@@ -610,6 +615,7 @@ a.button {
 
 .archive_list h3 {
 	font-size: var(--step-1);
+	margin-top: 0;
 }
 #content .archive_list .date {
 	font-size: var(--step--1);
@@ -1373,6 +1379,10 @@ code {
 			}
 		}
 
+		h3 {
+			margin-top: 0;
+		}
+
 		img {
 			aspect-ratio: 600/396;
 			object-fit: cover;
@@ -2081,13 +2091,6 @@ li > .video {
 		text-wrap: balance;
 	}
 
-	h3 {
-		@extend %color;
-		font-size: 21px;
-		letter-spacing: .02em;
-		margin-bottom: 1em;
-	}
-
 	a:focus-visible {
 		outline: var(--brand-blue) dotted 2px;
 		outline-offset: 2px;
@@ -2183,6 +2186,10 @@ li > .video {
 
 	h2 + figure {
 		margin-top: 0;
+	}
+
+	h3 + figure {
+		margin-top: var(--space-s);
 	}
 
 	aside {
