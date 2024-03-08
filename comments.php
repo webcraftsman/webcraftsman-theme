@@ -20,9 +20,9 @@
 <!-- You can start editing here. -->
 
 <?php if ($comments) : ?>
-	<h2 id="comments"><?php comments_number('No Responses', '1 Comment', '% Comments' );?> </h2>
+	<h2><?php comments_number('No Responses', '1 Comment', '% Comments' );?> </h2>
 
-	<ol id="comment_list">
+	<ol class="comment-list">
 	<!--Check if comment is by the author-->
 	<?php foreach ($comments as $comment) : ?>
 	<?php
@@ -76,13 +76,12 @@
 
 
 <?php if ('open' == $post-> comment_status) : ?>
-
 <h2>Comment on this post </h2>
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 <p>You must be <a href="../connections/<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">logged in</a> to post a comment.</p>
 <?php else : ?>
 
-<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="comment-form">
 
 <?php if ( $user_ID ) : ?>
 
@@ -91,15 +90,15 @@
 <?php else : ?>
 
 <p><label for="author">Name <?php if ($req) _e('(required)'); ?></label>
-<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" />
+<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>"/>
 </p>
 
 <p><label for="email">Email (will not be published) <?php if ($req) _e('(required)'); ?></label>
-<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" />
+<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" />
 </p>
 
 <p><label for="url">Your Web site</label>
-<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" />
 </p>
 
 <?php endif; ?>
@@ -107,8 +106,8 @@
 <!--<p><small><strong>XHTML:</strong> You can use these tags: <?php echo allowed_tags(); ?></small></p>-->
 
 <p><label for="comment">Your Comments</label>
-<textarea name="comment" id="comment" tabindex="4"></textarea></p>
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="Post Comment" />
+<textarea name="comment" id="comment"></textarea></p>
+<p><input name="submit" type="submit" id="submit" value="Post Comment" />
 <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
 </p>
 <?php do_action('comment_form', $post->ID); ?>

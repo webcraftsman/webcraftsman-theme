@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 <?php include('includes/body_id.php'); ?>
 	<?php include('includes/branding.php'); ?>
-	<div id="content">
-		<div id="content_main">
+	<main>
             <h1>
                 <span>Notes</span>
                 <a href="https://jeffbridgforth.com/notes/feed" class="feed-icon">
@@ -24,7 +23,6 @@
             </footer>
 
         <?php endif;?>
-        </div>
 
-    </div>
+    </main>
 <?php get_footer(); ?>

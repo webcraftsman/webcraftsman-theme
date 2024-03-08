@@ -1,5 +1,5 @@
-<header id="branding" role="banner">
-		<header class="site-heading">
+<header class="site-header">
+		<div class="identity">
 			<a href="/">
 				<svg width="100%" height="100%" viewBox="0 0 4000 4000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
 					<g transform="matrix(4,0,0,4,0,0)">
@@ -11,7 +11,7 @@
 					<h2>Front-end Developer</h2>
 				</div>
 			</a>
-		</header>
+				</div>
 		<div class="utilities">
 			<ul class="social-links">
 				<li>
@@ -74,6 +74,6 @@
 		<button id="mobile-nav" class="mobile-nav">Menu</a>
 </header>
 
-<nav id="nav_main" class="nav-main">
+<nav class="nav-main">
 	<?php wp_nav_menu( array( 'theme_location' => 'banner-nav','container' => 'false' )); ?>
 </nav>

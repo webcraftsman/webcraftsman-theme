@@ -122,14 +122,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/header_safe_save_173309.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/header_safe_save_173309.php",
-      "oF" : 1
-    },
     "\/header.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -200,44 +192,12 @@
       "oO" : 1,
       "oS" : 1
     },
-    "\/page-portfolio.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/page-portfolio.php",
-      "oF" : 1
-    },
     "\/page.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/page.php",
-      "oF" : 1
-    },
-    "\/portfolio.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/portfolio.html",
-      "oF" : 1
-    },
-    "\/portfolio.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/portfolio.php",
-      "oF" : 1
-    },
-    "\/portfolio2.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/portfolio2.php",
       "oF" : 1
     },
     "\/screenshot.png" : {

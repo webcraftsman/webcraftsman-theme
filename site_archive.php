@@ -6,15 +6,15 @@ Template Name: Archive
 <?php get_header(); ?>
 <?php include('includes/body_id.php'); ?>
 		<?php include('includes/branding.php'); ?>
-		<div id="content">
-			<div id="content_main">
+		<main>
+
 			<?php function wpb_total_posts() {
 				$total = wp_count_posts()->publish;
 				echo $total .' Total Posts';
 			} ;?>
-				<div id="content_posts">
+				<div class="post-content">
 				<h1>Blog Archive (<?php wpb_total_posts();?>)</h1>
-				<div id="search">
+				<div class="search">
 					<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
 						<div>
 							<input class="searchbox" type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" size="15"/>
@@ -41,7 +41,7 @@ Template Name: Archive
 
 				  <h2 id="year-<?php echo $yearNumber; ?>"><?php echo $yearNumber; ?> (<?php echo $i;?> posts) </h2>
 
-				  <div class="archive_list">
+				  <div class="post-listing">
 				    <?php foreach($posts as $post) : setup_postdata($post); ?>
 				      <article>
 				      	<?php if (has_post_thumbnail()) :?>
@@ -63,8 +63,5 @@ Template Name: Archive
 				<?php endforeach; ?>
 
  				</div>
- 			</div>
- 			<div id="content_secondary">
-			</div>
-		</div>
+		</main>
 <?php get_footer(); ?>
