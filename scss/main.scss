@@ -181,6 +181,12 @@ p + pre {
 		margin-left: auto;
 	}
 
+	.site-header & {
+		@media (max-width: layout-ems(659px)) {
+			display: none;
+		}
+	}
+
 	.text {
 		font-size: var(--step-0);
 	}
@@ -278,7 +284,7 @@ p + pre {
 		display: flex;
 		gap: var(--space-2xs);
 
-		[date-theme="light"] & {
+		[data-theme="light"] & {
 			accent-color: var(--text-color);
 			color-scheme: dark;
 		}
@@ -292,6 +298,37 @@ p + pre {
 			:root:not([data-theme]) & {
 				accent-color: var(--body-background-color);
 				color-scheme: light;
+			}
+		}
+
+		.visible-label {
+			@media (max-width: layout-ems(899px)) {
+				display: none;
+			}
+		}
+
+		@media (max-width: layout-ems(899px)) {
+			gap: var(--space-3xs);
+
+			label {
+				border: 1px solid currentColor;
+				border-radius: 100px;
+				font-size: var(--step--2);
+				padding: 0 var(--space-2xs);
+				position: relative;
+
+				&:has(input:checked) {
+					background-color: var(--body-background-color);
+					color: var(--text-color);
+				}
+
+				input {
+					inset: 0;
+					opacity: 0;
+					position: absolute;
+					z-index: 2;
+				}
+
 			}
 		}
 	}
@@ -311,7 +348,15 @@ p + pre {
 		path {
 			fill: var(--brand-beige);
 
+			[data-theme="light"] & {
+				fill: var(--brand-beige);
+			}
+
 			@media (prefers-color-scheme: dark) {
+				fill: var(--brand-blue);
+			}
+
+			[data-theme="dark"] & {
 				fill: var(--brand-blue);
 			}
 		}
@@ -351,6 +396,11 @@ p + pre {
 
 	.text-block {
 		align-self: center;
+		display: none;
+
+		@media (min-width: $break-5) {
+			display: block;
+		}
 	}
 }
 
