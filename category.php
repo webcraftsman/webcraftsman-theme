@@ -1,13 +1,12 @@
 <?php get_header(); ?>
 <?php include('includes/body_id.php'); ?>
 		<?php include('includes/branding.php'); ?>
-		<div id="content">
-			<div id="content_main">
-				<div id="content_posts">
+		<main>
+			<div class="post-content">
 			<?php if ($posts) { ?>
 			<h1><?php echo single_cat_title(); ?></h1>
 			<?php the_archive_description( '<p class="taxonomy-description">', '</p>' ); ?>
-			<div class="archive_list jeff">
+			<div class="post-listing">
 			<?php foreach ($posts as $post) : start_wp(); ?>
 				<article>
 				      	<?php if (has_post_thumbnail()) :?>
@@ -35,10 +34,6 @@
 		<?php } else { ?>
 		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 		<?php } ?>
- 				</div>
  			</div>
- 			<div id="content_secondary">
-
-			</div>
-		</div>
+		</main>
 <?php get_footer(); ?>

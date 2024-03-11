@@ -72,7 +72,7 @@ h2 {
 h3 {
 	font-size: var(--step-2);
 
-	* + & {
+	*:not(h2) + & {
 		margin-top: var(--space-xl);
 	}
 }
