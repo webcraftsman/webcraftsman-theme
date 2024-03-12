@@ -6,7 +6,7 @@
 			<?php if ($posts) { ?>
 			<h1><?php echo single_cat_title(); ?></h1>
 			<?php the_archive_description( '<p class="taxonomy-description">', '</p>' ); ?>
-			<div class="post-listing">
+			<div class="post-listing grid">
 			<?php foreach ($posts as $post) : start_wp(); ?>
 				<article>
 				      	<?php if (has_post_thumbnail()) :?>

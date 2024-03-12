@@ -3,6 +3,16 @@
 Template Name: Archive
 */
 ?>
+<?php if(isset($_GET['layout'])):
+
+if ($_GET['layout'] == 'no-image'){
+	$layout = 'listing';
+}
+?>
+
+<?php else:
+$layout = 'grid';
+endif;?>
 <?php get_header(); ?>
 <?php include('includes/body_id.php'); ?>
 		<?php include('includes/branding.php'); ?>
@@ -30,6 +40,16 @@ Template Name: Archive
 				<?php endforeach; ?>
 				</ul>
 
+				<?php $pageLink = get_page_link();?>
+
+				<ul class="layout-selector">
+				<?php $layoutSelector = isset($_GET['layout']) ? $_GET['layout'] : null;?>
+					<li><a href="<?= $pageLink; ?>"<?php if($layoutSelector === null): echo 'class="active"'; endif;?>>Image Grid</a></li>
+					<li><a href="<?= add_query_arg(array('layout' => 'no-image'), $pageLink); ?>" <?php if($layoutSelector == 'no-image'): echo 'class="active"'; endif;?>>Simplified View</a></li>
+				</ul>
+
+				<div class="archive-listing">
+
 				<?php foreach(posts_by_year() as $year => $posts) : ?>
 				<?php $yearNumber = $year;
 					  $i = 0;
@@ -41,27 +61,40 @@ Template Name: Archive
 
 				  <h2 id="year-<?php echo $yearNumber; ?>"><?php echo $yearNumber; ?> (<?php echo $i;?> posts) </h2>
 
-				  <div class="post-listing">
+				  <div class="post-listing<?php if($layout === 'grid'): echo ' grid'; else: echo ' block-listing'; endif;?>">
 				    <?php foreach($posts as $post) : setup_postdata($post); ?>
 				      <article>
+					<?php if($layout === 'grid'):?>
 				      	<?php if (has_post_thumbnail()) :?>
 				      		<figure><a href="<?php the_permalink() ?>"><img src="<?php the_post_thumbnail_url() ;?>" alt="<?php the_title();?>" /></a></figure>
 				      	<?php else: ?>
 				      		<figure><a href="<?php the_permalink();?>"><img src="http://jeffbridgforth.com/wp-content/uploads/philip-swinburn-vS7LVkPyXJU-unsplash.jpg" /></a></figure>
 				      	<?php endif; ?>
 				      	<p class="date"><?php echo get_the_date(); ?></p>
-				      	<h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+					<?php endif;?>
+					<?php if($layout === 'listing'):?>
+					<div class="block-container">
+					<?php endif;?>
+				      	<h3><a href="<?php the_permalink(); ?>" rel="bookmark">
+							<?php the_title(); ?></a>
+						</h3>
 				      	<?php if(in_category('weeknotes')):?>
 						<?php $week = get_field('week_of');?>
 							<?php if($week):?>
 							<div class="week-of"><?php the_field('week_of');?></div>
 							<?php endif;?>
 						<?php endif;?>
+					<?php if($layout === 'listing'):?>
+					</div>
+						<p class="date"><?php echo get_the_date('F j'); ?></p>
+					<?php endif;?>
 				      </article>
 				    <?php endforeach; ?>
 				  </div>
 				<?php endforeach; ?>
-
- 				</div>
+ 				</div> <!-- End of Archive Listing -->
+			<?php if($layout === 'listing'):?>
+			</div>
+			<?php endif;?>
 		</main>
 <?php get_footer(); ?>

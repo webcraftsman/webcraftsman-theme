@@ -26,7 +26,7 @@
 				</a>
 			</h2>
 		<?php query_posts('showposts=9'); ?>
-			<div class="post-listing">
+			<div class="post-listing grid">
 			<?php while (have_posts()) : the_post(); ?>
 				<article>
 					<?php if (has_post_thumbnail()) :?>
