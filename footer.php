@@ -63,19 +63,31 @@
 			<script>hljs.highlightAll();</script>
 		<?php endif; ?>
 <?php wp_footer(); ?>
-<!-- StatCounter Code -->
-<!--
-<script type="text/javascript">
-var sc_project=1045003;
-var sc_invisible=1;
-var sc_partition=9;
-var sc_security="84e7cebb";
-</script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter_xhtml.js"></script><noscript><div class="statcounter"><a class="statcounter" href="https://www.statcounter.com/"><img class="statcounter" src="http://c10.statcounter.com/counter.php?sc_project=1045003&java=0&security=84e7cebb&invisible=1" alt="web stats script" /></a></div></noscript>
--->
 
-<?php if(is_post_type_archive('notes')):?>
+<?php
+	$site_url = get_site_url();
+	if ( str_contains( $site_url, '.com' ) ) :?>
+
+		<!-- Default Statcounter code for Jeff Bridgforth
+		http://www.jeffbridgforth.com -->
+		<script type="text/javascript">
+		var sc_project=1045003;
+		var sc_invisible=0;
+		var sc_security="7b3c26e4";
+		var scJsHost = "https://";
+		document.write("<sc"+"ript type='text/javascript' src='" +
+		scJsHost+
+		"statcounter.com/counter/counter.js'></"+"script>");
+		</script>
+		<noscript><div class="statcounter"><a title="Web Analytics"
+		href="https://statcounter.com/" target="_blank"><img
+		class="statcounter"
+		src="https://c.statcounter.com/1045003/0/7b3c26e4/0/"
+		alt="Web Analytics"
+		referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+		<!-- End of Statcounter Code -->
 
 <?php endif;?>
+
 	</body>
 </html>
