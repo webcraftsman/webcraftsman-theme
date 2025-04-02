@@ -10,7 +10,7 @@ Template Name: Search
 		<?php include('includes/branding.php'); ?>
 		<main>
 			<div class="post-content">
-			<h1>Search Results <?php if($searchTerm):?>for '<?php echo $searchTerm;?>'<?php endif;?></h1>
+			<h1>Search Results <?php if($searchTerm):?>for '<?php echo esc_html( $searchTerm);?>'<?php endif;?></h1>
 			<div class="search">
 				<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
 					<div>

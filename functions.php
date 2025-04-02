@@ -118,7 +118,7 @@ function posts_by_year() {
 		wp_dequeue_style( 'wp-block-library' );
 		wp_dequeue_style( 'wp-block-library-theme' );
 	   }
-	   add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css' );
+	// add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css' );
 
 
 	   function cptui_register_my_cpts() {

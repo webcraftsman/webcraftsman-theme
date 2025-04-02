@@ -4,7 +4,7 @@
 		<title><?php if ( is_page('8230') ) { bloginfo('description');} else { wp_title('',true); } ?></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1"/>
-		<meta name="description" content="Jeff Bridgforth is a senior developer with LGND.">
+		<meta name="description" content="Jeff Bridgforth is a senior front-end developer looking for a new opportunity.">
 		<link rel="icon" href="/favicon.ico"><!-- 32×32 -->
 		<link rel="icon" href="/jb-logo.svg" type="image/svg+xml">
 		<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/images/jb-logo-180.png"><!-- 180×180 -->

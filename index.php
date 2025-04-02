@@ -5,7 +5,7 @@
 		<div class="post-content">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article class="post">
-					<h1><?php the_title();?></h1>
+					<h1 style="view-transition-name: post-<?php echo get_the_id();?>"><?php the_title();?></h1>
 					<p class="post-time">
 						<span>
 						<?php $time_diff = current_time('timestamp') - 							get_the_time('U');
@@ -20,7 +20,7 @@
 				<?php if(in_category('weeknotes')):?>
 				<?php $week = get_field('week_of');?>
 					<?php if($week):?>
-					<p class="week-of"><strong>Week of <?php the_field('week_of');?></strong></p>
+					<p class="week-of"><strong>Week of <?php echo esc_html(get_field('week_of'));?></strong></p>
 					<?php endif;?>
 				<?php endif;?>
 					<?php the_content(); ?>

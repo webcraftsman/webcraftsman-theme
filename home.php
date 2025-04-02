@@ -1,8 +1,3 @@
-<?php
-/*
-Template Name: Archive
-*/
-?>
 <?php if(isset($_GET['layout'])):
 
 if ($_GET['layout'] == 'no-image'){
@@ -33,6 +28,14 @@ endif;?>
 						</div>
 					</form>
 				</div>
+
+				<ul class="quick-links">
+					<li><a href="/category/europe-trip-2024/">Europe Trip 2024</a></li>
+					<li><a href="/category/post-each-day-challenge/">Post Each Day Challenge</a></li>
+					<li><a href="/category/weeknotes/">Weeknotes</a></li>
+					<li><a href="/on-this-day/">On This Day</a></li>
+				</ul>
+
 				<!-- https://wordpress.org/support/topic/list-all-posts-on-a-page-split-them-by-year -->
 				<ul class="archive-jump-links">
 				<?php foreach(posts_by_year() as $year => $posts) : ?>
@@ -75,7 +78,7 @@ endif;?>
 					<?php if($layout === 'listing'):?>
 					<div class="block-container">
 					<?php endif;?>
-				      	<h3><a href="<?php the_permalink(); ?>" rel="bookmark">
+				      	<h3><a href="<?php the_permalink(); ?>" rel="bookmark" style="view-transition-name: post-<?php echo get_the_id();?>">
 							<?php the_title(); ?></a>
 						</h3>
 				      	<?php if(in_category('weeknotes')):?>

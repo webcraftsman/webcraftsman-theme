@@ -9,7 +9,8 @@
 			</figure>
 			<div class="text">
 				<h1>I build websites</h1>
-				<p>My name is Jeff Bridgforth. I am a <a href="https://jeffbridgforth.com/front-of-the-front-end-developer/">&lsquo;front of the front-end developer&rsquo;</a> for <a href="https://lgnd.com">LGND</a>, which is just a fancy way of saying that I build websites created by our design team.</p>
+				<p>My name is Jeff Bridgforth.
+				I am a <a href="https://jeffbridgforth.com/front-of-the-front-end-developer/">&lsquo;front of the front-end developer&rsquo;</a>, which is just a fancy way of saying that I build websites created by designers.</p>
 				<p><a href="https://jeffbridgforth.com/the-origin-of-my-online-handle/">Webcraftsman</a> is not just my online handle. It describes me to a “t.” I put my heart and soul into every design I code. My craftsmanship is embodied in my style, dedication, and attention to detail.</p>
 				<p>You can contact me at <strong>webcraftsman@jeffbridgforth.com</strong></p>
 			</div>
@@ -30,12 +31,12 @@
 			<?php while (have_posts()) : the_post(); ?>
 				<article>
 					<?php if (has_post_thumbnail()) :?>
-						<figure><a href="<?php the_permalink() ?>"><img src="<?php the_post_thumbnail_url() ;?>" alt="<?php the_title();?>" /></a></figure>
+						<figure><a href="<?php the_permalink() ?>" ><img src="<?php the_post_thumbnail_url() ;?>" alt="<?php the_title();?>" /></a></figure>
 					<?php else: ?>
 						<figure><a href="<?php the_permalink();?>"><img src="http://jeffbridgforth.com/wp-content/uploads/philip-swinburn-vS7LVkPyXJU-unsplash.jpg" /></a></figure>
 					<?php endif; ?>
 					<div class="date"><?php echo get_the_date(); ?></div>
-					<h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+					<h3><a href="<?php the_permalink(); ?>" rel="bookmark" style="view-transition-name: post-<?php echo get_the_id();?>"><?php the_title(); ?></a></h3>
 					<?php if(in_category('weeknotes')):?>
 					<?php $week = get_field('week_of');?>
 						<?php if($week):?>
