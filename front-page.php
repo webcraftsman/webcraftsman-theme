@@ -26,7 +26,14 @@
 					</svg>
 				</a>
 			</h2>
-		<?php query_posts('showposts=9'); ?>
+			<?php if ( is_user_logged_in() ) {
+					query_posts('showposts=9&post_status=publish,private');
+				} else {
+					query_posts('showposts=9&post_status=publish');
+				}
+			?>
+
+
 			<div class="post-listing grid">
 			<?php while (have_posts()) : the_post(); ?>
 				<article>

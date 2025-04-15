@@ -50,7 +50,7 @@ function posts_by_year() {
     'orderby' => 'post_date',
     'order' => 'DESC',
     'post_type' => 'post',
-    'post_status' => 'publish'
+    'post_status' => is_user_logged_in() ? array('publish', 'private') : array('publish'),
   ));
 
   // loop through posts, populating $years arrays
