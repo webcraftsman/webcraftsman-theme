@@ -43,12 +43,10 @@ endif;?>
 				<?php endforeach; ?>
 				</ul>
 
-				<?php $pageLink = get_page_link();?>
-
 				<ul class="layout-selector">
 				<?php $layoutSelector = isset($_GET['layout']) ? $_GET['layout'] : null;?>
-					<li><a href="<?= $pageLink; ?>"<?php if($layoutSelector === null): echo 'class="active"'; endif;?>>Image Grid</a></li>
-					<li><a href="<?= add_query_arg(array('layout' => 'no-image'), $pageLink); ?>" <?php if($layoutSelector == 'no-image'): echo 'class="active"'; endif;?>>Simplified View</a></li>
+					<li><a href="/archive"<?php if($layoutSelector === null): echo 'class="active"'; endif;?>>Image Grid</a></li>
+					<li><a href="/archive?layout=no-image" <?php if($layoutSelector == 'no-image'): echo 'class="active"'; endif;?>>Simplified View</a></li>
 				</ul>
 
 				<div class="archive-listing">
