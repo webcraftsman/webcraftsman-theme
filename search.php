@@ -11,7 +11,7 @@ Template Name: Search
 		<main>
 			<div class="post-content">
 			<h1>Search Results <?php if($searchTerm):?>for '<?php echo esc_html( $searchTerm);?>'<?php endif;?></h1>
-			<div class="search">
+			<search class="search">
 				<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
 					<div>
 						<input class="searchbox" type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" size="15"/>
@@ -19,7 +19,7 @@ Template Name: Search
 						<input type="submit" id="searchsubmit" value="Search" />
 					</div>
 				</form>
-			</div>
+			</search>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<div class="search-listing-post">
 				<h2><a href="<?php the_permalink() ?>"><?php the_title();?></a></h2>
@@ -34,15 +34,15 @@ Template Name: Search
 				<?php else: ?>
 				<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 				<?php endif; ?>
-			</div>
-			<div id="search">
-				<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-					<div>
-						<input class="searchbox" type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" size="15"/>
-						<input type="hidden" name="post_type" value="post" />
-						<input type="submit" id="searchsubmit" value="Search" />
-					</div>
-				</form>
+				<search class="search">
+					<form method="get" id="searchform-bottom" action="<?php bloginfo('home'); ?>/">
+						<div>
+							<input class="searchbox" type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" size="15"/>
+							<input type="hidden" name="post_type" value="post" />
+							<input type="submit" id="searchsubmit" value="Search" />
+						</div>
+					</form>
+				</search>
 			</div>
 		</main>
 <?php get_footer(); ?>
