@@ -1080,6 +1080,11 @@ code {
 	@extend %border-color;
 	padding-left:48px;
 
+	&:has(.text-bubble) {
+		border-left: 0;
+		padding-left: 0;
+	}
+
 	cite {
 		display: inline-block;
 		margin-top: var(--space-l);
