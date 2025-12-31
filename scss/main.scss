@@ -2462,3 +2462,11 @@ figcaption br {
 	}
 }
 
+.vertical-video {
+	@media (min-width: $break-4) {
+		video {
+			max-height: 85dvh;
+		}
+	}
+}
+

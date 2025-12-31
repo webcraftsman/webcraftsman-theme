@@ -7,7 +7,7 @@
       "uuidString" : "C54C2899-0A44-4DFE-9AD0-62F45E908E7E"
     }
   ],
-  "creatorBuild" : "34704",
+  "creatorBuild" : "34892",
   "files" : {
     "\/404.php" : {
       "cB" : 0,
@@ -1258,6 +1258,9 @@
         "active" : 0,
         "optionString" : "{'skipBlankLines': false, 'ignoreComments': false}"
       },
+      "no-unassigned-vars" : {
+        "active" : 0
+      },
       "no-undef" : {
         "active" : 1,
         "optionString" : "{'typeof': false}"
@@ -1338,7 +1341,8 @@
         "active" : 0
       },
       "no-useless-escape" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'allowRegexCharacters': []}"
       },
       "no-useless-rename" : {
         "active" : 0,
